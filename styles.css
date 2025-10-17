@@ -1,0 +1,20 @@
+/*
+ * File: styles.css
+ * Description: Contains custom styles for the Quang Vinh Concrete website.
+ */
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Add Noto Sans Lao for Lao text */
+[lang="lo"] body, [lang="lo"] {
+    font-family: 'Noto Sans Lao', sans-serif;
+}
+
+/* Hero Section Background Image */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://placehold.co/1920x1080/a0aec0/4a5568?text=Thi+Cong+Be+Tong');
+    background-size: cover;
+    background-position: center;
+}

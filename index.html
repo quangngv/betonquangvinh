@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate-key="site_title">Công ty Bê tông Quang Vinh - Chất lượng tạo nên thương hiệu</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Lao:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-yellow-600" data-translate-key="company_name">Bê Tông Quang Vinh</a>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#gioithieu" class="text-gray-600 hover:text-yellow-600 transition duration-300" data-translate-key="nav_about">Giới thiệu</a>
+                <a href="#dathang" class="text-gray-600 hover:text-yellow-600 transition duration-300" data-translate-key="nav_order">Đặt Bê Tông</a>
+                <a href="#lienhe" class="text-gray-600 hover:text-yellow-600 transition duration-300" data-translate-key="nav_contact">Liên hệ</a>
+                <a href="tel:0987654321" class="bg-yellow-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-yellow-600 transition duration-300" data-translate-key="nav_call">Gọi Ngay</a>
+                <!-- Language Switcher -->
+                <div class="relative" id="language-switcher">
+                    <button id="language-switcher-button" class="flex items-center text-gray-600 hover:text-yellow-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9V3m0 18a9 9 0 009-9m-9 9a9 9 0 00-9-9"></path></svg>
+                        <span id="current-lang" class="ml-1 text-sm font-medium">VI</span>
+                    </button>
+                    <div id="language-options" class="absolute right-0 mt-2 w-28 bg-white rounded-md shadow-lg py-1 hidden">
+                        <a href="#" class="lang-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="vi">Tiếng Việt</a>
+                        <a href="#" class="lang-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="en">English</a>
+                        <a href="#" class="lang-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="lo">ພາສາລາວ</a>
+                    </div>
+                </div>
+            </div>
+            <div class="md:hidden flex items-center gap-4">
+                 <!-- Language Switcher Mobile -->
+                <div class="relative" id="language-switcher-mobile">
+                    <button id="language-switcher-button-mobile" class="flex items-center text-gray-600 hover:text-yellow-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9V3m0 18a9 9 0 009-9m-9 9a9 9 0 00-9-9"></path></svg>
+                        <span id="current-lang-mobile" class="ml-1 text-sm font-medium">VI</span>
+                    </button>
+                    <div id="language-options-mobile" class="absolute right-0 mt-2 w-28 bg-white rounded-md shadow-lg py-1 hidden">
+                        <a href="#" class="lang-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="vi">Tiếng Việt</a>
+                        <a href="#" class="lang-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="en">English</a>
+                        <a href="#" class="lang-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-lang="lo">ພາສາລາວ</a>
+                    </div>
+                </div>
+                <button id="mobile-menu-button" class="text-gray-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 space-y-2">
+            <a href="#gioithieu" class="block text-gray-600 hover:text-yellow-600 py-2" data-translate-key="nav_about_mobile">Giới thiệu</a>
+            <a href="#dathang" class="block text-gray-600 hover:text-yellow-600 py-2" data-translate-key="nav_order_mobile">Đặt Bê Tông</a>
+            <a href="#lienhe" class="block text-gray-600 hover:text-yellow-600 py-2" data-translate-key="nav_contact_mobile">Liên hệ</a>
+            <a href="tel:0987654321" class="block bg-yellow-500 text-white text-center font-bold py-2 px-4 rounded-lg hover:bg-yellow-600 transition duration-300 mt-2" data-translate-key="nav_call_mobile">Gọi Ngay</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section text-white h-[60vh] flex items-center justify-center text-center">
+            <div class="container mx-auto px-6">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4" data-translate-key="hero_title">Bê Tông Quang Vinh</h1>
+                <p class="text-lg md:text-2xl font-light" data-translate-key="hero_subtitle">Chất lượng tạo nên thương hiệu - Nền tảng vững chắc cho mọi công trình.</p>
+            </div>
+        </section>
+
+        <!-- Giới thiệu Section -->
+        <section id="gioithieu" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-800" data-translate-key="about_title">Về Chúng Tôi</h2>
+                <div class="w-24 h-1 bg-yellow-500 mx-auto mb-8"></div>
+                <p class="max-w-3xl mx-auto text-gray-600 leading-relaxed" data-translate-key="about_desc">
+                    Công ty Bê Tông Quang Vinh tự hào là nhà cung cấp bê tông tươi hàng đầu, mang đến những giải pháp tối ưu cho các công trình xây dựng. Với hệ thống trạm trộn hiện đại và đội ngũ nhân viên chuyên nghiệp, chúng tôi cam kết cung cấp sản phẩm chất lượng cao, đúng mác, đủ khối lượng và dịch vụ giao hàng tận nơi nhanh chóng, đáp ứng mọi yêu cầu khắt khe nhất của khách hàng.
+                </p>
+                <div class="grid md:grid-cols-3 gap-8 mt-12 text-left">
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-semibold mb-2 text-yellow-600" data-translate-key="feature1_title">Chất lượng Vượt Trội</h3>
+                        <p class="text-gray-600" data-translate-key="feature1_desc">Sử dụng nguyên vật liệu cao cấp, quy trình kiểm soát chất lượng nghiêm ngặt theo tiêu chuẩn quốc tế.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-semibold mb-2 text-yellow-600" data-translate-key="feature2_title">Dịch vụ Chuyên Nghiệp</h3>
+                        <p class="text-gray-600" data-translate-key="feature2_desc">Đội ngũ tư vấn tận tình, hỗ trợ kỹ thuật và vận chuyển 24/7, đảm bảo tiến độ công trình.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-semibold mb-2 text-yellow-600" data-translate-key="feature3_title">Giá cả Cạnh Tranh</h3>
+                        <p class="text-gray-600" data-translate-key="feature3_desc">Chúng tôi luôn nỗ lực tối ưu hóa chi phí để mang đến cho khách hàng mức giá hợp lý nhất.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Đặt Bê Tông Section -->
+        <section id="dathang" class="py-16 md:py-24 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800" data-translate-key="order_title">Đặt Bê Tông Nhanh Chóng</h2>
+                <div class="max-w-4xl mx-auto bg-white p-8 md:p-10 rounded-xl shadow-lg">
+                    <form id="order-form" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Cột 1: Thông tin công trình -->
+                        <div class="space-y-6">
+                            <div>
+                                <label for="floor-area" class="block text-sm font-medium text-gray-700 mb-1" data-translate-key="form_area">Diện tích mặt sàn (m²)</label>
+                                <input type="number" id="floor-area" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500" data-translate-key="form_area_placeholder" placeholder="Ví dụ: 80">
+                            </div>
+                            
+                            <div>
+                                <label for="concrete-grade" class="block text-sm font-medium text-gray-700 mb-1" data-translate-key="form_grade">Chọn mác bê tông</label>
+                                <div class="flex items-center space-x-2">
+                                    <select id="concrete-grade" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500">
+                                        <option value="" data-translate-key="form_grade_option">-- Chọn mác --</option>
+                                        <option value="150">Mác 150</option>
+                                        <option value="200">Mác 200</option>
+                                        <option value="250">Mác 250</option>
+                                        <option value="300">Mác 300</option>
+                                        <option value="350">Mác 350</option>
+                                        <option value="400">Mác 400</option>
+                                    </select>
+                                    <button type="button" id="suggest-grade-btn" class="px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 text-sm whitespace-nowrap" data-translate-key="form_suggest_btn">Gợi ý</button>
+                                </div>
+                                <p id="suggestion-text" class="text-xs text-gray-500 mt-1 h-4"></p>
+                            </div>
+                             <div>
+                                <label for="quantity" class="block text-sm font-medium text-gray-700 mb-1" data-translate-key="form_quantity">Số lượng (khối - m³)</label>
+                                <input type="number" id="quantity" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500" data-translate-key="form_quantity_placeholder" placeholder="Ví dụ: 10">
+                            </div>
+                        </div>
+
+                        <!-- Cột 2: Thông tin khách hàng -->
+                        <div class="space-y-6">
+                            <div>
+                                <label for="customer-name" class="block text-sm font-medium text-gray-700 mb-1" data-translate-key="form_name">Họ và tên</label>
+                                <input type="text" id="customer-name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500" data-translate-key="form_name_placeholder" placeholder="Nguyễn Văn A">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1" data-translate-key="form_phone">Số điện thoại</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500" data-translate-key="form_phone_placeholder" placeholder="09xxxxxxxx">
+                            </div>
+                            <div>
+                                <label for="address" class="block text-sm font-medium text-gray-700 mb-1" data-translate-key="form_address">Địa chỉ công trình</label>
+                                <textarea id="address" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500" data-translate-key="form_address_placeholder" placeholder="Số nhà, đường, phường/xã, quận/huyện, tỉnh/thành phố"></textarea>
+                            </div>
+                        </div>
+                        
+                        <!-- Submit button -->
+                        <div class="md:col-span-2 text-center mt-4">
+                            <button type="submit" class="w-full md:w-auto bg-yellow-500 text-white font-bold py-3 px-12 rounded-lg hover:bg-yellow-600 transition duration-300 transform hover:scale-105" data-translate-key="form_submit_btn">
+                                Gửi Yêu Cầu Đặt Hàng
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Liên hệ Section -->
+        <section id="lienhe" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                 <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800" data-translate-key="contact_title">Liên Hệ Với Chúng Tôi</h2>
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Contact Info -->
+                    <div class="space-y-6">
+                         <div>
+                            <h3 class="text-2xl font-semibold mb-4" data-translate-key="contact_info_title">Thông tin liên hệ</h3>
+                            <p class="text-gray-600 leading-relaxed mb-6" data-translate-key="contact_info_desc">Chúng tôi luôn sẵn sàng lắng nghe và tư vấn cho bạn. Đừng ngần ngại liên hệ với Bê Tông Quang Vinh để nhận được báo giá và dịch vụ tốt nhất.</p>
+                            <a href="tel:0987654321" class="inline-flex items-center gap-2 bg-yellow-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-yellow-600 transition duration-300 transform hover:scale-105 mb-6">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                                <span data-translate-key="contact_call_btn">Gọi tư vấn ngay</span>
+                            </a>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <svg class="w-6 h-6 text-yellow-600 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            <div>
+                                <h4 class="font-semibold" data-translate-key="contact_address_label">Địa chỉ</h4>
+                                <p class="text-gray-600">Số 123, Đường ABC, Quận XYZ, Thành phố Hà Nội</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <svg class="w-6 h-6 text-yellow-600 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                             <div>
+                                <h4 class="font-semibold" data-translate-key="contact_hotline_label">Hotline</h4>
+                                <p class="text-gray-600">0987.654.321 - 0912.345.678</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                           <svg class="w-6 h-6 text-yellow-600 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            <div>
+                                <h4 class="font-semibold" data-translate-key="contact_email_label">Email</h4>
+                                <p class="text-gray-600">lienhe@betongquangvinh.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div>
+                         <div class="bg-gray-50 p-8 rounded-xl shadow-lg">
+                            <h3 class="text-2xl font-semibold mb-4" data-translate-key="contact_form_title">Gửi tin nhắn cho chúng tôi</h3>
+                            <form id="contact-form" class="space-y-4">
+                                <div>
+                                    <label for="contact-name" class="sr-only">Họ tên</label>
+                                    <input type="text" id="contact-name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500" data-translate-key="contact_form_name_placeholder" placeholder="Họ và tên của bạn">
+                                </div>
+                                <div>
+                                    <label for="contact-email" class="sr-only">Email</label>
+                                    <input type="email" id="contact-email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500" data-translate-key="contact_form_email_placeholder" placeholder="Email của bạn">
+                                </div>
+                                <div>
+                                    <label for="contact-message" class="sr-only">Lời nhắn</label>
+                                    <textarea id="contact-message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500" data-translate-key="contact_form_message_placeholder" placeholder="Nội dung tin nhắn..."></textarea>
+                                </div>
+                                <button type="submit" class="w-full bg-yellow-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-yellow-600 transition duration-300" data-translate-key="contact_form_submit_btn">Gửi Tin Nhắn</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p data-translate-key="footer_copyright">&copy; 2024 Công ty Bê tông Quang Vinh. All Rights Reserved.</p>
+            <p class="text-sm text-gray-400 mt-2" data-translate-key="footer_tagline">Nền tảng vững chắc cho mọi công trình.</p>
+        </div>
+    </footer>
+
+    <!-- Floating Call Button for Mobile -->
+    <a href="tel:0987654321" class="md:hidden fixed bottom-5 right-5 bg-yellow-500 p-4 rounded-full shadow-lg z-50 hover:bg-yellow-600 transition-transform transform hover:scale-110">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+    </a>
+
+    <!-- Custom Modal for Notifications -->
+    <div id="notification-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white p-8 rounded-lg shadow-xl max-w-sm w-full text-center">
+            <h3 id="modal-title" class="text-xl font-bold mb-4"></h3>
+            <p id="modal-message" class="text-gray-600 mb-6"></p>
+            <button id="modal-close-btn" class="bg-yellow-500 text-white font-bold py-2 px-6 rounded-lg hover:bg-yellow-600 transition duration-300"></button>
+        </div>
+    </div>
+
+    <!-- Custom Javascript -->
+    <script src="main.js"></script>
+</body>
+</html>
+
